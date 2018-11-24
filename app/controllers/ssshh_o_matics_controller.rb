@@ -42,6 +42,6 @@ class SsshhOMaticsController < ApplicationController
   end
 
   def set_ssshh_o_matic_location
-    @ssshh_o_matic = @location.ssshh_o_matic.find_by!(id: params[:id]) if @location
+    @ssshh_o_matic = @location.appliance.find_by!(id: params[:id]) if @location
   end
 end

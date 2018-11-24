@@ -43,6 +43,6 @@ class AirQualityMachinesController < ApplicationController
   end
 
   def set_air_quality_machine_location
-    @air_quality_machine = @location.air_quality_machine.find_by!(id: params[:id]) if @location
+    @air_quality_machine = @location.appliance.find_by!(id: params[:id]) if @location
   end
 end
